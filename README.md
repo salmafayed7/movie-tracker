@@ -17,7 +17,7 @@ A full-stack movie watchlist application with a dark cinematic theme.
 
 ### Clone the repo
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git clone https://github.com/salmafayed7/movie-tracker.git
 cd YOUR_REPO_NAME
 ```
 
