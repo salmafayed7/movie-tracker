@@ -1,0 +1,25 @@
+.star-rating {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 1.2rem;
+  transition: transform 0.15s ease, color 0.15s ease;
+  line-height: 1;
+}
+
+.star--filled { color: #760550; }
+.star--empty  { color: #797981; }
+
+.star--clickable {
+  cursor: pointer;
+}
+.star--clickable:hover {
+  transform: scale(1.3);
+  animation: popStar 0.2s ease;
+}
+
+.star-rating--sm .star { font-size: 0.9rem; }
+.star-rating--lg .star { font-size: 1.6rem; }
+.star-rating--xl .star { font-size: 2rem; }

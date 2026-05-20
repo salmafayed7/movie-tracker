@@ -1,0 +1,144 @@
+:root {
+  --bg-primary: #040424;
+  --bg-secondary: #12121a;
+  --bg-card: #1a1f36;
+  --border-color: #2a2a3d;
+  --accent: #760550;
+  --accent-hover: #760550;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0b8;
+  --status-watchlist: #3b82f6;
+  --status-watched: #097652;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .heading-font {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-8px); }
+  40%       { transform: translateX(8px); }
+  60%       { transform: translateX(-6px); }
+  80%       { transform: translateX(6px); }
+}
+
+@keyframes popStar {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}
+
+.btn-pink {
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.1s;
+}
+.btn-pink:hover {
+  background-color: var(--accent-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+.btn-pink:active { transform: translateY(0); }
+
+.btn-outline-pink {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.btn-outline-pink:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+/* Card base */
+.dark-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+/* Status badges */
+.badge-watchlist  { background-color: var(--status-watchlist); color: #fff; }
+.badge-watched    { background-color: var(--status-watched);   color: #fff; }
+
+/* Form controls dark theme */
+.form-control-dark {
+  background-color: #111120;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 50%;
+}
+.form-control-dark:focus {
+  background-color: #111120;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(70,3,48,0.35);
+  color: var(--text-primary);
+  outline: none;
+}
+.form-control-dark::placeholder { color: var(--text-secondary); }
+.form-control-dark option { background-color: #1c1c28; }
+
+/* Page wrapper */
+.page-wrapper {
+  min-height: calc(100vh - 70px);
+  padding: 2rem 0;
+  animation: fadeIn 0.4s ease;
+}

@@ -1,0 +1,115 @@
+.navbar-dark-custom {
+  background-color: #0d0d14;
+  border-bottom: 1px solid #2a2a3d;
+  height: 70px;
+  z-index: 1000;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.navbar-brand-custom {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.brand-icon { font-size: 1.5rem; }
+
+.brand-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link-custom {
+  color: #a0a0b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.nav-link-custom:hover { color: #ffffff; }
+.nav-link-custom.active {
+  color: #ffffff;
+  border-bottom-color: #460330;
+}
+
+.nav-add-btn { border-radius: 6px !important; }
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-left: 1rem;
+  border-left: 1px solid #2a2a3d;
+}
+
+.user-greeting {
+  color: #a0a0b8;
+  font-size: 0.9rem;
+}
+.user-greeting strong { color: #ffffff; }
+
+/* Hamburger */
+.navbar-toggler-custom {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.navbar-toggler-custom span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #a0a0b8;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+.navbar-toggler-custom:hover span { background: #460330; }
+
+@media (max-width: 768px) {
+  .navbar-toggler-custom { display: flex; }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #0d0d14;
+    border-bottom: 1px solid #2a2a3d;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    z-index: 999;
+  }
+  .navbar-links.open { display: flex; }
+
+  .nav-user {
+    border-left: none;
+    border-top: 1px solid #2a2a3d;
+    padding-left: 0;
+    padding-top: 0.75rem;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
